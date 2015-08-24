@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>PreImageLoad by MaTyRocK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">PreImageLoad</h1>
+      <h2 class="project-tagline">Ultralight weight jQuery plugin for load images only when is needed.</h2>
+      <a href="https://github.com/MaTyRocK/PreImageLoad" class="btn">View on GitHub</a>
+      <a href="https://github.com/MaTyRocK/PreImageLoad/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MaTyRocK/PreImageLoad/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="preimageload" class="anchor" href="#preimageload" aria-hidden="true"><span class="octicon octicon-link"></span></a>PreImageLoad</h1>
+
+<p>Ultralight weight jQuery plugin for load small (like thumbs, or nothing) images and fully image when is needed.</p>
+
+<p>The js file size is only <strong>424 bytes</strong>!</p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li>Small filesize (Only 424bytes!)</li>
+<li>Cross-browser (Tested in IE8 but teorically it works in IE6+)</li>
+<li>Easy customization and configuration</li>
+<li>Fast Page load</li>
+<li>SEO Optimized! (It don't hide images like another plugins)</li>
+</ul>
+
+<h1>
+<a id="starting" class="anchor" href="#starting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Starting</h1>
+
+<p>Loading files:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery-1.11.3.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>preimageload.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>You can put the script in the bottom (before <code>&lt;/body&gt;</code>), but you could see 'ghost' if you insert alternate content in video container.</p>
+
+<h1>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h1>
+
+<div class="highlight highlight-html"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery-1.11.3.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>preimageload.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>height:500px<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;With default config&lt;/<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Googlelogo.png/320px-Googlelogo.png<span class="pl-pds">"</span></span> <span class="pl-e">data-pil-src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>height:500px<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;Configured offset&lt;/<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">img</span> <span class="pl-e">data-pil-offset</span>=<span class="pl-s"><span class="pl-pds">"</span>-500<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Googlelogo.png/320px-Googlelogo.png<span class="pl-pds">"</span></span> <span class="pl-e">data-pil-src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>height:500px<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">$(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1">    $(<span class="pl-c1">window</span>).<span class="pl-c1">scroll</span>(<span class="pl-k">function</span>(){</span>
+<span class="pl-s1">        $.<span class="pl-c1">PreImageLoad</span>();</span>
+<span class="pl-s1">    });</span>
+<span class="pl-s1">});</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<h1>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h1>
+
+<ul>
+<li>
+<a href="https://github.com/int" class="user-mention">@int</a> <code>offset</code> (default <code>-50</code>): when to load the fully image</li>
+<li>
+<a href="https://github.com/bool" class="user-mention">@bool</a> <code>allowOverride</code> (default <code>true</code>): read <code>&lt;img&gt;</code> <code>data-pil-offset</code> attribute and use it as a configuration</li>
+</ul>
+
+<h1>
+<a id="setting-options" class="anchor" href="#setting-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting options</h1>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> options <span class="pl-k">=</span> {
+    offset<span class="pl-k">:</span> <span class="pl-c1">20</span>,
+    allowOverride<span class="pl-k">:</span> <span class="pl-c1">false</span>
+};
+$.<span class="pl-c1">PreImageLoad</span>(options);</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MaTyRocK/PreImageLoad">PreImageLoad</a> is maintained by <a href="https://github.com/MaTyRocK">MaTyRocK</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
