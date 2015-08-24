@@ -1,3 +1,4 @@
+/*! PreImageLoad | https://github.com/MaTyRocK/PreImageLoad */
 (function($){
 	$.PreImageLoad = function(options){
 		var defaults = {
@@ -9,7 +10,6 @@
 			if($(this).data('pil-src')){
 				var offset = (options.allowOverride && $(this).data('pil-offset')) ? parseInt($(this).data('pil-offset')) : options.offset,
 					now = $(window).height() + $(window).scrollTop() + offset;
-				console.log(now+' vs '+$(this).offset().top);
 				if(now >= $(this).offset().top){
 					$(this).attr('src', $(this).data('pil-src'));
 				}
