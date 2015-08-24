@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head>
+<style>img{width:100%}</style>
+<script src="javascripts/jquery-1.11.3.min.js"></script>
+<script src="javascripts/preimageload.min.js"></script>
+</head>
+<body>
+<div style="height:500px"></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Googlelogo.png/320px-Googlelogo.png" data-pil-src="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png">
+<div style="height:500px"></div>
+<img data-pil-offset="-500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Googlelogo.png/320px-Googlelogo.png" data-pil-src="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png">
+<div style="height:500px"></div>
+<script>
+$(function(){
+	$(window).scroll(function(){
+		$.PreImageLoad();
+	});
+});
+</script>
+</body>
+</html>
