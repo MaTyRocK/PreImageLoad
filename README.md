@@ -1,3 +1,7 @@
+> **Note: I made this plugin when I was still learning jQuery and JavaScript in general. You should NOT use this! There are lots of good libraries that do the same but 1000x better.**
+
+-----
+
 # PreImageLoad
 Ultralight weight jQuery plugin for load small (like thumbs, or nothing) images and fully image when is needed.
 
